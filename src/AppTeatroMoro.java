@@ -12,7 +12,7 @@ public class AppTeatroMoro {
                     confirmarVenta(reserva);
                     break;
                 case 2:
-                    ReservaDeAsiento.imprimirAsientos();
+                    ReservaDeAsiento.mostrarAsientos();
                     break;
                 case 3:
                     System.out.println("Saliendo del sistema");

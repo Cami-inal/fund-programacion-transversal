@@ -16,40 +16,31 @@ public class Menu {
         System.out.println("Otro número = Público General");
         int tipoCliente = Constantes.SCANNER.nextInt();
 
+        int edad;
         switch (tipoCliente) {
             case 1:
-                return "TERCERA_EDAD";
+                System.out.println("Ingresar edad");
+                edad = Constantes.SCANNER.nextInt();
+                if (edad >= 65){
+                    return "TERCERA_EDAD";
+                } else {
+                    System.out.println("No válida para tercera edad, se asigna a Público General");
+                    return "PUBLICO GENERAL";
+                }
             case 2:
                 return "ESTUDIANTE";
             case 3:
-                return "NIÑO";
+                System.out.println("Ingrese edad");
+                edad = Constantes.SCANNER.nextInt();
+                if (edad <=14){
+                    return "NIÑO";
+                }else {
+                    System.out.println("No válido para niño, se asigna a Público General");
+                    return "PUBLICO GENERAL";
+                }
+
             case 4:
                 return "MUJER";
-            default:
-                return "PUBLICO_GENERAL";
-        }
-    }
-
-    public static String tipoDeUbicacion() {
-        System.out.println("Seleccione tipo de ubicación.");
-        System.out.println("1 = VIP");
-        System.out.println("2 = Palco");
-        System.out.println("3 = Platea baja");
-        System.out.println("4 = Platea alta");
-        System.out.println("5 = Galería");
-        int opcion = Constantes.SCANNER.nextInt();
-
-        switch (opcion) {
-            case 1:
-                return "VIP";
-            case 2:
-                return "PALCO";
-            case 3:
-                return "PLATEA_BAJA";
-            case 4:
-                return "PLATEA_ALTA";
-            case 5:
-                return "GALERIA";
             default:
                 return "PUBLICO_GENERAL";
         }
